@@ -29,28 +29,29 @@ random.shuffle(deck)
 
 # Set up the GUI
 root = tk.Tk()
-root.geometry("300x200")
+root.geometry("400x200")
+root.configure(bg="grey")
 root.title("Card Workout Generator")
 
-# Workout text area
-workout_text = tk.StringVar()
-workout_label = tk.Label(root, textvariable=workout_text, justify="left")
-workout_label.pack(pady=10)
+# Workout text area using Text widget
+workout_text = tk.Text(root, width=40, height=3, wrap="word", bg="grey")
+workout_text.pack(pady=10)
 
-# Function to generate the next workout
+# Update the workout text in the Text widget
 def generate_next_workout():
     if deck:  # If there are cards left
         card, suit = deck.pop(0)  # Pop the first card from the deck
         exercise = workout_key[card]
         reps = suit_reps[suit]
-        workout_text.set(f"{card} of {suit}: {reps} {exercise}")
+        workout_text.delete(1.0, tk.END)  # Clear previous text
+        workout_text.insert(tk.END, f"{card} of {suit}: {reps} {exercise}")
     else:
-        workout_text.set("No more combinations left.")
-        exit()
+        workout_text.delete(1.0, tk.END)
+        workout_text.insert(tk.END, "No more combinations left.")
 
 # Generate button
 generate_button = tk.Button(root, text="Generate Workout", command=generate_next_workout)
-generate_button.pack(pady=20)
+generate_button.pack(padx=(20, 20), pady=20, fill="both")  # Make button resize with window
 
 # Run the application
 root.mainloop()
