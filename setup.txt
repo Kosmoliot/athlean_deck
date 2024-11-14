@@ -1,0 +1,21 @@
+Create a Virtual Environment Using a Specific Python Version
+To ensure your virtual environment uses the Homebrew-installed Python (e.g., Python 3.11.x), you can specify the full path to the Python interpreter when creating the virtual environment.
+
+bash
+Copy code
+# Replace /opt/homebrew/bin/python3 with the actual path to your Homebrew Python
+/opt/homebrew/bin/python3 -m venv myenv
+2. Activate the Virtual Environment
+Once the virtual environment is created, activate it:
+
+bash
+Copy code
+# For macOS and Linux
+source myenv/bin/activate
+3. Verify the Python Version in the Virtual Environment
+After activating the virtual environment, check that it’s using the correct Python version:
+
+bash
+Copy code
+python --version
+This should show your Homebrew-installed Python version (e.g., Python 3.11.x).
