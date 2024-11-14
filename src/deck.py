@@ -50,6 +50,7 @@
 
 # # Run the application
 # root.mainloop()
+
 import random
 
 # Define the cards and suits
@@ -86,8 +87,8 @@ def generate_next_workout():
         reps = suit_reps[suit]
         print(f"{card} of {suit}: {reps} {exercise}")
     else:
-        print("No more combinations left. Restarting the workout!")
-        refill_deck()
+        print("No more combinations left.")
+        exit()
 
 # Function to refill and shuffle the deck when it's empty
 def refill_deck():
