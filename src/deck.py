@@ -45,7 +45,6 @@ def refill_deck():
     random.shuffle(deck)
 
 # Main loop to generate the next workout on Enter press
-
 while True:
     input("Next...\n")
     generate_next_workout()
