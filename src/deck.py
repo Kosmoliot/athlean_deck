@@ -49,3 +49,8 @@ while True:
     input("Next...\n")
     generate_next_workout()
     print("\n---------------------\n")
+
+while True:
+    input("Next...\n")
+    generate_next_workout()
+    print("\n---------------------\n")
