@@ -50,8 +50,3 @@ while True:
     generate_next_workout()
     print("\n---------------------\n")
 
-# Main loop to generate the next workout on Enter press
-while True:
-    input("Next...\n")
-    generate_next_workout()
-    print("\n---------------------\n")
