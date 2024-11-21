@@ -45,13 +45,24 @@ def generate_next_workout():
         exercise = workout_key[card]
         reps = suit_reps[suit]
         workout_text.delete(1.0, tk.END)  # Clear previous text
-        workout_text.insert(tk.END, f"{card} of {suit}: {reps} {exercise}")
+        workout_text.insert(tk.END, f"{card} of {suit}: {reps} {exercise}", "center")
     else:
         workout_text.delete(1.0, tk.END)
-        workout_text.insert(tk.END, "No more combinations left.")
+        workout_text.insert(tk.END, "No more combinations left.", "center")
 
 # Generate button
-generate_button = tk.Button(root, text="Generate Workout", command=generate_next_workout)
+generate_button = tk.Button(
+    root, 
+    text="Generate Workout", 
+    command=generate_next_workout, 
+    highlightthickness=0, 
+    borderwidth=0, 
+    relief="flat",
+    bg="grey",   # Match button background to the root background
+    fg="black",  # Set text color if desired for contrast
+    highlightbackground="grey",  # Match to background to remove shadow
+    highlightcolor="grey"        # Match to background to remove shadow
+)
 generate_button.pack(padx=(20, 20), pady=20, fill="both")  # Make button resize with window
 
 # Run the application
