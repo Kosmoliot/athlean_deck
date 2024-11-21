@@ -35,6 +35,7 @@ root.title("Card Workout Generator")
 
 # Workout text area using Text widget
 workout_text = tk.Text(root, width=40, height=3, wrap="word", bg="grey")
+workout_text.tag_configure("center", justify="center")
 workout_text.pack(pady=10)
 
 # Update the workout text in the Text widget
