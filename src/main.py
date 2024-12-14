@@ -66,4 +66,5 @@ generate_button = tk.Button(
 generate_button.pack(padx=(20, 20), pady=20, fill="both")  # Make button resize with window
 
 # Run the application
+root.mainloop()# Run the application
 root.mainloop()
