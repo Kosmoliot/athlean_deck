@@ -67,4 +67,5 @@ generate_button.pack(padx=(20, 20), pady=20, fill="both")  # Make button resize 
 
 # Run the application
 root.mainloop()
-
+# Run the application
+root.mainloop()
